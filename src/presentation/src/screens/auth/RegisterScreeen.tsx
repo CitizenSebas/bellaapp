@@ -1,14 +1,14 @@
 import { Text, TextInput, View, StyleSheet } from "react-native";
 import { colors, globalStyles } from "../../../../config/theme/app-theme";
 import { Logo, CustomButton } from "../../components";
-import { AuthLayout } from "../../layout/AuthLayout";
+import { ScreenLayout } from "../../layout/ScreenLayout";
 import { useAuth } from "../../hooks/useAuth";
 
 export const RegisterScreeen = () => {
   const { onRegister, user, setUser } = useAuth();
 
   return (
-    <AuthLayout>
+    <ScreenLayout>
       <View>
         <Logo />
 
@@ -68,12 +68,12 @@ export const RegisterScreeen = () => {
           <CustomButton
             iconName="log-in"
             text="sign up"
-            bgColor=""
+            bgColor={false}
             cb={onRegister}
           />
         </View>
       </View>
-    </AuthLayout>
+    </ScreenLayout>
   );
 };
 

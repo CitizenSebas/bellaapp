@@ -74,7 +74,7 @@ export const useAuth = () => {
 
     await signInWithEmailAndPassword(auth, user.email, user.password)
       .then((userCrendential) => {
-        navigation.navigate("HomeScreen");
+        navigation.navigate("HomeScreenStack");
       })
       .catch((error) => {
         if (error.code === "auth/user-not-found") {

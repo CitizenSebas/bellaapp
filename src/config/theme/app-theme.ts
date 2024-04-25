@@ -19,7 +19,7 @@ export const globalStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingHorizontal: 20,
-        marginHorizontal: 20
+        marginHorizontal: 10
     },
     textInput: {
         backgroundColor: colors.gray,

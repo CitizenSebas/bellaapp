@@ -1,5 +1,5 @@
 import { TextInput, View, Text, StyleSheet } from "react-native";
-import { AuthLayout } from "../../layout/AuthLayout";
+import { ScreenLayout } from "../../layout/ScreenLayout";
 import { CustomButton, Logo } from "../../components";
 import { colors, globalStyles } from "../../../../config/theme/app-theme";
 import { useAuth } from "../../hooks/useAuth";
@@ -8,7 +8,7 @@ export const ResetScreen = () => {
   const { recoveryPassword, user, setUser } = useAuth();
 
   return (
-    <AuthLayout>
+    <ScreenLayout>
       <Logo />
 
       <View style={globalStyles.form}>
@@ -30,11 +30,11 @@ export const ResetScreen = () => {
         <CustomButton
           iconName="send-outline"
           cb={recoveryPassword}
-          bgColor={colors.primary}
+          bgColor
           text="Send Email"
         />
       </View>
-    </AuthLayout>
+    </ScreenLayout>
   );
 };
 

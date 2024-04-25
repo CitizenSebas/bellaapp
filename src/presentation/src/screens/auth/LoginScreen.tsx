@@ -1,6 +1,6 @@
 import { Text, View, TextInput, StyleSheet, ScrollView } from "react-native";
 import { useAuth } from "../../hooks/useAuth";
-import { AuthLayout } from "../../layout/AuthLayout";
+import { ScreenLayout } from "../../layout/ScreenLayout";
 import { CustomButton, Logo, TextButtton } from "../../components";
 import { colors, globalStyles } from "../../../../config/theme/app-theme";
 import { StackScreenProps } from "@react-navigation/stack";
@@ -12,7 +12,7 @@ export const LoginScreen = ({ navigation }: Props) => {
   const { user, setUser, onLogin } = useAuth();
 
   return (
-    <AuthLayout>
+    <ScreenLayout>
       <View>
         <Logo />
         <View style={styles.form}>
@@ -43,7 +43,7 @@ export const LoginScreen = ({ navigation }: Props) => {
           <CustomButton
             iconName="log-in"
             text="Login"
-            bgColor=""
+            bgColor={false}
             cb={onLogin}
           />
 
@@ -52,20 +52,20 @@ export const LoginScreen = ({ navigation }: Props) => {
           <CustomButton
             text="Continue with Google"
             iconName="logo-google"
-            bgColor={colors.primary}
+            bgColor
             cb={() => navigation.navigate("RegisterScreen")}
           />
 
           <CustomButton
             iconName="logo-facebook"
             text="Login"
-            bgColor={colors.primary}
+            bgColor
             cb={() => console.log("Hola mundo")}
           />
         </View>
       </View>
     
-    </AuthLayout>
+    </ScreenLayout>
   );
 };
 

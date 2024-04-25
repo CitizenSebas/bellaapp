@@ -1,3 +1,6 @@
 export * from './ui/shared/Logo'
 export * from './ui/shared/CustomButton'
 export * from './ui/shared/TextButtton'
+export * from './ui/header/Header'
+export * from './ui/shared/SearchInput'
+export * from './ui/home/Discount'

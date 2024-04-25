@@ -1,12 +1,12 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
-  HomeScreen,
   LoginScreen,
   RegisterScreeen,
   ResetScreen,
   OnBoarding,
 } from "../screens";
 import { Ionicons } from "@expo/vector-icons";
+import { DrawerNavigation } from "./DrawerNavigation";
 
 export type RootStackParams = {
   OnBoarding: undefined;
@@ -14,7 +14,7 @@ export type RootStackParams = {
   RegisterScreen: undefined;
   ResetScreen: undefined;
   messageScreen: { message: string; iconName: keyof typeof Ionicons.glyphMap };
-  HomeScreen: undefined;
+  HomeScreenStack: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParams>();
@@ -22,7 +22,7 @@ const Stack = createNativeStackNavigator<RootStackParams>();
 export const StackNavigation = () => {
   return (
     <Stack.Navigator
-      initialRouteName="OnBoarding"
+      initialRouteName="HomeScreenStack"
       screenOptions={{
         headerShown: false,
       }}
@@ -31,7 +31,7 @@ export const StackNavigation = () => {
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="RegisterScreen" component={RegisterScreeen} />
       <Stack.Screen name="ResetScreen" component={ResetScreen} />
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="HomeScreenStack" component={DrawerNavigation} />
     </Stack.Navigator>
   );
 };

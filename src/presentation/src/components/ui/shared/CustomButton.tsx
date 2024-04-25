@@ -4,8 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 interface Props {
   cb: () => void;
-  bgColor: string;
-
+  bgColor: boolean;
   iconName: keyof typeof Ionicons.glyphMap;
   text: string;
   width?: number;
@@ -18,22 +17,23 @@ export const CustomButton = ({ cb, bgColor, iconName, text, width }: Props) => {
       style={[
         styles.button,
         {
-          backgroundColor: bgColor,
+          backgroundColor: bgColor ? colors.primary : "",
           width: width,
-          borderWidth: bgColor.length > 0 ? 0 : 2,
+      
+          borderWidth: bgColor ? 0 : 2,
         },
       ]}
     >
       <View style={styles.buttonContent}>
         <Ionicons
           name={iconName}
-          color={bgColor.length > 0 ? "white" : colors.primary}
+          color={bgColor ? "white" : colors.primary}
           size={32}
         />
         <Text
           style={[
             styles.buttonText,
-            { color: bgColor?.length > 0 ? "white" : colors.primary },
+            { color: bgColor ? "white" : colors.primary },
           ]}
         >
           {text}

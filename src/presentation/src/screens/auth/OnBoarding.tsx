@@ -1,6 +1,6 @@
 import { View, StyleSheet } from "react-native";
 import { CustomButton, Logo } from "../../components";
-import { AuthLayout } from "../../layout/AuthLayout";
+import { ScreenLayout } from "../../layout/ScreenLayout";
 import { colors } from "../../../../config/theme/app-theme";
 import { StackScreenProps } from "@react-navigation/stack";
 import { RootStackParams } from "../../navigation/StackNavigation";
@@ -9,7 +9,7 @@ interface Props extends StackScreenProps<RootStackParams, "OnBoarding"> {}
 
 export const OnBoarding = ({ navigation }: Props) => {
   return (
-    <AuthLayout>
+    <ScreenLayout>
       <View style={styles.container}>
         <Logo />
 
@@ -30,7 +30,7 @@ export const OnBoarding = ({ navigation }: Props) => {
           />
         </View>
       </View>
-    </AuthLayout>
+    </ScreenLayout>
   );
 };
 
