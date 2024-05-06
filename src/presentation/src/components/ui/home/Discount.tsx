@@ -39,16 +39,16 @@ export const Discount = ({ label, text, onPress, imageName }: Props) => {
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: "flex-end",
     backgroundColor: colors.gray,
     borderRadius: 20,
-    paddingRight: 20,
-    paddingLeft: 10,
-    height: 200,
     flexDirection: "row",
-    marginTop: 20,
-    marginHorizontal: 10,
+    height: 200,
     justifyContent: "center",
-    alignItems: "flex-end",
+    marginHorizontal: 10,
+    marginTop: 20,
+    paddingLeft: 10,
+    paddingRight: 20,
   },
   label: {
     fontSize: 24,
@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: colors.secondary,
     borderRadius: 10,
-    padding: 2,
     marginVertical: 5,
+    padding: 2,
     width: 70
   },
   buttonText: {

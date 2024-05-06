@@ -7,7 +7,11 @@ interface Props extends PropsWithChildren {}
 export const ScreenLayout = ({ children }: Props) => {
   return (
     <ScrollView
-      contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}
+      contentContainerStyle={{
+        flexGrow: 1,
+        marginBottom: 1000,
+      }}
+      showsVerticalScrollIndicator={false}
     >
       <SafeAreaView style={globalStyles.mainContainer}>{children}</SafeAreaView>
     </ScrollView>

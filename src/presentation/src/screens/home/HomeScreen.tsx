@@ -1,37 +1,38 @@
-import { Text, View, Image, ScrollView } from "react-native";
+import { View, Image, StyleSheet } from "react-native";
 import { ScreenLayout } from "../../layout/ScreenLayout";
-import { Discount, SearchInput } from "../../components";
+import {
+  SearchInput,
+  HomeSection,
+  DiscountScroll,
+  ProductScroll,
+  DesignScroll,
+} from "../../components";
 
 export const HomeScreen = () => {
   return (
     <ScreenLayout>
-      <View style={{ flex: 1, alignItems: "center", gap: 10 }}>
-        <Image
-          source={require("../../../../../assets/img/header.png")}
-          width={500}
-          height={500}
-        />
-
+      <View style={styles.container}>
+        <Image source={require("../../../../../assets/img/header.png")} />
         <SearchInput />
 
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <Discount
-            label="40%"
-            text="On everything"
-            imageName={require("../../../../../assets/img/woman1.png")}
-          />
-          <Discount
-            label="70%"
-            text="On select collection"
-            imageName={require("../../../../../assets/img/woman2.png")}
-          />
-        </ScrollView>
+        <DiscountScroll />
 
-        <View>
-          <Text>Just Arrived</Text>
-          <Text>View all</Text>
-        </View>
+        <HomeSection title="Just Arrived" />
+
+        <ProductScroll />
+
+        <HomeSection title="Designer Picked" />
+        <DesignScroll />
       </View>
     </ScreenLayout>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    gap: 10,
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+});

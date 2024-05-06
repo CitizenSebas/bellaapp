@@ -6,6 +6,7 @@ export const colors = {
     primary: '#82BECC',
     secondary: '#5E929E',
     blue: '#4ACDEB',
+    blueDark: '#252B42',
     black: '#101010',
     success: '#28A745',
     info: '#2B99D2',
@@ -31,5 +32,36 @@ export const globalStyles = StyleSheet.create({
     },
     form: {
         gap: 20
+    },
+    productContainer: {
+        marginHorizontal: 10,
+        gap: 4,
+        width: 150
+    },
+    image: {},
+    info: {},
+    productTitle: {
+        color: colors.blueDark,
+        fontSize: 15,
+        fontWeight: "bold",
+        textAlign: "left",
+    },
+    productLabel: {
+        color: colors.gray,
+        fontWeight: 'bold'
+    },
+    productAdd: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    productPrice: {
+        fontSize: 15,
+        fontWeight: '900'
+    },
+    ProductButton: {
+        backgroundColor: colors.black,
+        borderRadius: 100,
+        padding: 10
     }
 });
